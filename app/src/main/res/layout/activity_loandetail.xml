@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="loandetailModel"
+            type="com.nsk.app.bussiness.index.viewmodel.IndexInfoBean.LoanInfo.LoanBean"/>
+    </data>
+
+<android.support.constraint.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="@dimen/space_20"
+    >
+    <Button
+        android:id="@+id/btn_requestloan"
+        android:textColor="@color/white"
+        android:text="申请借款"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/orange_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.NestedScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_requestloan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--平台详情-->
+    <ImageView
+        app:url="@{loandetailModel.n_loan_logo_url}"
+        android:layout_marginLeft="@dimen/space_20"
+        android:src="@drawable/person_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/iv_loantitle"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+    <TextView
+        android:layout_marginLeft="@dimen/space_14"
+        android:text="@{loandetailModel.n_loan_title}"
+        app:layout_constraintTop_toTopOf="@id/iv_loantitle"
+        app:layout_constraintBottom_toBottomOf="@id/iv_loantitle"
+        app:layout_constraintStart_toEndOf="@id/iv_loantitle"
+        android:id="@+id/tv_loandetail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/title_black"
+        />
+    <View
+        android:id="@+id/dashview"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginRight="@dimen/space_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_loantitle"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/dashline"
+        android:layerType="software"
+        />
+
+    <TextView
+        android:id="@+id/loan_title_limit"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dashview"
+        android:text="可贷额度"
+        android:textColor="@color/gray_999999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_loan_imit"
+        android:text='@{loandetailModel.n_loan_limit + @string/unit_yuan}'
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginLeft="@dimen/space_10"
+        app:layout_constraintTop_toBottomOf="@id/dashview"
+        app:layout_constraintStart_toEndOf="@id/loan_title_limit"
+        android:textColor="@color/title_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginLeft="@dimen/space_60"
+        app:layout_constraintTop_toBottomOf="@id/dashview"
+        app:layout_constraintStart_toEndOf="@id/tv_loan_imit"
+        android:id="@+id/title_interest"
+        android:text="@{loandetailModel.interest}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_999999"
+        />
+    <TextView
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginLeft="@dimen/space_10"
+        app:layout_constraintTop_toBottomOf="@id/dashview"
+        app:layout_constraintStart_toEndOf="@id/title_interest"
+        android:id="@+id/tv_interest"
+        android:text="@{loandetailModel.n_loan_monthlyinterest}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title_black"
+        android:visibility="gone"
+        />
+    <View
+        android:id="@+id/divider1"
+        android:layout_marginTop="@dimen/space_16"
+        app:layout_constraintTop_toBottomOf="@id/loan_title_limit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_8"
+        android:background="@color/background"
+        />
+    <TextView
+        android:layout_marginRight="@dimen/space_20"
+        android:id="@+id/loan_loandetails"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        app:fromhtml="@{loandetailModel.n_loan_details}"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <View
+        app:layout_constraintTop_toBottomOf="@id/loan_loandetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>

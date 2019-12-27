@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+    <variable
+        name="loanuimodel"
+        type="com.nsk.app.bussiness.loan.viewmodel.LoanIndexViewmodel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_smallloan"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:paddingTop="@dimen/space_12"
+            app:layout_constraintEnd_toStartOf="@id/rl_bigloan"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_smallloan"
+                android:layout_width="@dimen/space_50"
+                android:layout_height="@dimen/space_50"
+                android:layout_alignParentTop="true"
+                android:onClick="@{loanuimodel::toSmallLoan}"
+                android:src="@drawable/smallloan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_smallloan"
+                android:layout_marginTop="@dimen/space_6"
+                android:text="小额贷款"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bigloan"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:paddingTop="@dimen/space_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rl_bankloan"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/rl_smallloan"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_bigloan"
+                android:layout_width="@dimen/space_50"
+                android:layout_height="@dimen/space_50"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{loanuimodel::toBigLoan}"
+                android:src="@drawable/bigloan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_bigloan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_6" android:gravity="center"
+                android:text="大额低息"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bankloan"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:paddingTop="@dimen/space_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rl_banlloan"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/rl_bigloan"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_bankloan"
+                android:layout_width="@dimen/space_50"
+                android:layout_height="@dimen/space_50"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{loanuimodel::toBankLoan}"
+                android:src="@drawable/bankloan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_bankloan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_6"
+                android:gravity="center" android:text="银行放贷"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_banlloan"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:paddingTop="@dimen/space_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/rl_bankloan"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_myloan"
+                android:layout_width="@dimen/space_50"
+                android:layout_height="@dimen/space_50"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{loanuimodel::toMyLoan}"
+                android:src="@drawable/myloan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/iv_myloan"
+                android:layout_below="@id/iv_myloan"
+                android:layout_marginLeft="-23dp"
+                android:layout_marginTop="@dimen/space_6"
+                android:gravity="center" android:text="我的贷款"/>
+        </RelativeLayout>
+        <!--<ImageView-->
+        <!--android:layout_marginLeft="45dp"-->
+        <!--android:layout_toRightOf="@id/iv_smallloan"-->
+        <!--android:id="@+id/iv_bigloan"-->
+        <!--android:src="@drawable/bigloan"-->
+        <!--android:layout_width="@dimen/space_50"-->
+        <!--android:layout_height="@dimen/space_50"-->
+        <!--android:onClick="@{loanuimodel::toBigLoan}"-->
+        <!--/>-->
+
+        <!--<TextView-->
+        <!--android:layout_marginTop="@dimen/space_6"-->
+        <!--android:text="银行放款"-->
+        <!--android:layout_alignLeft="@id/iv_bankloan"-->
+        <!--android:layout_below="@id/iv_bankloan"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+        <!--<ImageView-->
+        <!--android:layout_marginLeft="45dp"-->
+        <!--android:layout_toRightOf="@id/iv_bankloan"-->
+        <!--android:id="@+id/iv_myloan"-->
+        <!--android:src="@drawable/myloan"-->
+        <!--android:layout_width="@dimen/space_50"-->
+        <!--android:layout_height="@dimen/space_50"-->
+        <!--android:onClick="@{loanuimodel::toMyLoan}"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_marginTop="@dimen/space_6"-->
+        <!--android:text="我的贷款"-->
+        <!--android:layout_alignLeft="@id/iv_myloan"-->
+        <!--android:layout_below="@id/iv_myloan"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_loans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_6"
+            app:adapter="@{loanuimodel.LoanAdapter}"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/rl_smallloan">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.nsk.app.bussiness.index.viewmodel.Xmodel"></variable>
+    </data>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  >
+<FrameLayout
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</FrameLayout>
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/bottom_nav"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:itemTextColor="@color/navigation_color"
+        app:itemIconTint="@color/navigation_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navigationmenu">
+
+    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+</android.support.constraint.ConstraintLayout>
+</layout>

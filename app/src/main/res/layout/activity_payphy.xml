@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="paymodel"
+            type="com.nsk.app.bussiness.healthy.viewmodel.WorkPhyInfo"/>
+        <variable
+            name="orderInfo"
+            type="com.nsk.app.bussiness.healthy.viewmodel.WorkPhyOrder"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        />
+    <TextView
+        android:layout_marginLeft="@dimen/space_15"
+        android:text="@{paymodel.n_hospital_name}"
+        android:textSize="14sp"
+        android:textColor="@color/title_black"
+        android:layout_marginTop="@dimen/space_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_hospitalname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="@{paymodel.n_address}"
+        android:textSize="12sp"
+        android:textColor="@color/title_black"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginTop="@dimen/space_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hospitalname"
+        android:id="@+id/tv_hospitaladdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/ns_detail"
+        android:paddingTop="@dimen/space_8"
+        android:layout_marginTop="@dimen/space_15"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hospitaladdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text='@{@string/taocan_des + paymodel.n_exam_product_details}'
+
+            android:id="@+id/tv_productdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/health_green"
+        android:text="付款"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+    <RelativeLayout
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/ns_detail"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_16"
+        >
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/title_yuanjia"
+        android:layout_marginTop="@dimen/space_22"
+        android:layout_marginLeft="@dimen/space_20"
+        android:text="套餐原价"
+        android:textColor="@color/boder_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/title_tuangou"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_below="@id/title_yuanjia"
+            android:text="团购价格"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/title_scorededuct"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_below="@id/title_tuangou"
+            android:text="积分抵用"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/tv_yuanjiacost"
+            app:money="@{paymodel.n_exam_price}"
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_22"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/tv_tuangoucost"
+            app:money="@{paymodel.n_exam_group_price}"
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_below="@id/tv_yuanjiacost"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/tv_scoreuse"
+            android:text='@{orderInfo.totalScore>0 ? @string/code_money + orderInfo.showString : orderInfo.showString}'
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_below="@id/title_tuangou"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/divider"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_below="@id/title_scorededuct"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="支付价格"
+            android:textSize="15sp"
+            android:textColor="@color/title_black"
+            android:id="@+id/tv_paymoneytitle"
+            android:layout_below="@id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/tv_payprice"
+            app:money="@{paymodel.n_exam_group_price -orderInfo.deductYuan}"
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_below="@id/divider"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--android:text='@{@string/code_money + (paymodel.n_exam_group_price -orderInfo.deductYuan)}'-->
+    </RelativeLayout>
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+
+        app:cLeftTextString="支付宝"
+        android:id="@+id/ct_alipay"
+        app:cLeftIconResForDrawableLeft="@drawable/icon_alipay"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50" />
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        app:cRightIconResForDrawableRight="@drawable/pay_checked"
+        app:cLeftTextString="微信支付"
+        android:id="@+id/ct_wxpay"
+        app:cLeftIconResForDrawableLeft="@drawable/icon_wxpay"
+        app:layout_constraintTop_toBottomOf="@id/ct_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50" />
+</android.support.constraint.ConstraintLayout>
+</layout>

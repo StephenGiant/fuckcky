@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_security"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cLeftBottomTextColor="@color/title_black"
+        app:cLeftTextSize="18sp"
+        app:cLeftTextString="@string/security_setting"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_res"
+        android:layout_width="match_parent"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        app:cLeftBottomTextColor="@color/title_black"
+        app:cLeftTextSize="18sp"
+        app:cLeftTextString="@string/responsibility_statement"
+        app:layout_constraintTop_toBottomOf="@id/ct_security"
+        />
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        android:layout_marginTop="12dp"
+        app:cLeftBottomTextColor="@color/title_black"
+        app:cLeftTextSize="18sp"
+        app:cLeftTextString="@string/about_us"
+        app:layout_constraintTop_toBottomOf="@id/ct_res"
+        />
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_unregist"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        app:cCenterTextColor="@color/orange_main"
+        app:cCenterTextSize="18sp"
+        app:cCenterTextString="@string/equit_account"
+        app:layout_constraintTop_toBottomOf="@id/ct_about_us"
+        />
+</android.support.constraint.ConstraintLayout>

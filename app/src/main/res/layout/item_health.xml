@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/space_20">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+    >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_avator"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/tv_hos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="11111111"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+
+        >
+
+            <TextView
+                android:id="@+id/tv_ys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主治医师:"
+                android:textColor="@color/boder_gray"
+                android:textSize="14dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_ks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ys"
+                android:layout_marginTop="8dp"
+                android:text="就诊科室："
+                android:textColor="@color/boder_gray"
+                android:textSize="14dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ks"
+                android:layout_marginTop="8dp"
+                android:text="挂号费："
+                android:textColor="@color/boder_gray"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fee"
+                android:layout_marginTop="8dp"
+                android:text="就诊日期："
+                android:textColor="@color/boder_gray"
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/space_20"
+            android:text="未支付"
+            android:textColor="@color/boder_gray"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="phymodel"
+            type="com.nsk.app.bussiness.healthy.viewmodel.WorkPhyInfo"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/roundcorner_gray"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/space_8"
+    android:paddingRight="@dimen/space_8"
+    android:paddingBottom="@dimen/space_8"
+    >
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/space_8"
+        android:id="@+id/tv_hospital"
+        android:text="@{phymodel.n_hospital_name}"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hospital"
+        android:id="@+id/tv_hospitaladdress"
+        android:text="@{phymodel.n_address}"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_hospitaladdress"
+        android:id="@+id/tv_begintime"
+        android:text="@{phymodel.n_group_start_time}"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_begintime"
+        android:id="@+id/tv_phydetail"
+        android:text="@{phymodel.n_exam_product_details}"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_phydetail"
+        android:id="@+id/tv_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{phymodel.getPriceString()}"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        />
+</android.support.constraint.ConstraintLayout>
+</layout>

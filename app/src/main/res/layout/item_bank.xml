@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="70dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+>
+    <ImageView
+        android:id="@+id/iv_bank"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+    <TextView
+        android:id="@+id/tv_bank"
+        android:text="1111"
+        android:layout_marginTop="@dimen/space_10"
+        android:gravity="center"
+        android:textColor="@color/main_black"
+        android:textSize="@dimen/space_14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_height="375dp">
+    <TextView
+        android:id="@+id/tv"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"/>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="立即升级"
+        android:background="@color/colorAccent"
+        android:id="@id/versionchecklib_version_dialog_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+</RelativeLayout>

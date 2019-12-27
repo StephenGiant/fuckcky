@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="indexcardmodel"
+            type="com.nsk.app.bussiness.index.viewmodel.IndexInfoBean.LoanInfo"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/space_20"
+    android:paddingLeft="@dimen/space_20"
+    android:paddingTop="@dimen/space_10"
+    android:paddingBottom="@dimen/space_8"
+    android:background="@color/white"
+    >
+<ImageView
+    android:id="@+id/iv_index_logo"
+    app:url="@{indexcardmodel.loan.n_loan_logo_url}"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="32dp"
+    android:layout_height="32dp" />
+    <TextView
+        android:layout_marginLeft="@dimen/space_10"
+        app:layout_constraintTop_toTopOf="@id/iv_index_logo"
+        app:layout_constraintStart_toEndOf="@id/iv_index_logo"
+        android:text="@{indexcardmodel.loan.n_loan_title}"
+        android:textSize="15sp"
+        android:textColor="@color/title_black"
+        android:id="@+id/tv_index_loanname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:text="@string/request_now"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="@dimen/space_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_index_logo"
+        android:id="@+id/tv_range"
+        android:textSize="15sp"
+        android:text="@{indexcardmodel.loan.n_loan_limit}"
+        android:textColor="@color/orange_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_marginTop="@dimen/space_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_range"
+        android:text="额度(元)"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/tv_range"
+        app:layout_constraintStart_toEndOf="@id/tv_range"
+        android:layout_marginLeft="@dimen/space_35"
+        android:id="@+id/tv_subhead"
+        android:text="@{indexcardmodel.loan.n_loan_subheading}"
+        android:textSize="14sp"
+        android:textColor="@color/title_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_monthintest"
+        android:layout_marginTop="@dimen/space_4"
+        app:layout_constraintStart_toStartOf="@id/tv_subhead"
+        app:layout_constraintTop_toBottomOf="@id/tv_subhead"
+        android:text="@{indexcardmodel.loan.interest}"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text='@{@string/deadline + indexcardmodel.loan.n_loan_deadline + @string/day}'
+        app:layout_constraintStart_toEndOf="@id/tv_monthintest"
+        app:layout_constraintTop_toBottomOf="@id/tv_subhead"
+        android:layout_marginTop="@dimen/space_4"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <!--<TextView-->
+        <!--android:layout_marginTop="19dp"-->
+        <!--android:text="@{indexcardmodel.loan.n_loan_subheading}"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv_unit"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<View-->
+        <!--android:layout_marginTop="@dimen/space_10"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv_unit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/gray"-->
+        <!--/>-->
+</android.support.constraint.ConstraintLayout>
+</layout>

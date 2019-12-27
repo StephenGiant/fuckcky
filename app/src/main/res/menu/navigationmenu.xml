@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/regist_card"
+        android:title="办卡"
+        android:icon="@drawable/card_icon"
+        />
+<item android:id="@+id/wealth"
+    android:title="借钱"
+    android:icon="@drawable/loan_icon"
+    />
+    <item android:id="@+id/health"
+        android:title="健康"
+        android:icon="@drawable/health_icon"
+        />
+    <item android:id="@+id/person"
+        android:title="我的"
+        android:icon="@drawable/mine_icon"
+        />
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="yiliaoinfo"
+            type="com.nsk.app.bussiness.index.viewmodel.IndexInfoBean.YiliaoInfo"/>
+    </data>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/space_15"
+    android:paddingBottom="@dimen/space_15"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_indexbutton"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:url = "@{yiliaoinfo.n_content}"
+        android:layout_marginLeft="@dimen/space_8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50"/>
+    <!--<TextView-->
+        <!--app:layout_constraintStart_toEndOf="@id/iv_indexbutton"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--android:text="@{yiliaoinfo.name}"-->
+        <!--android:paddingLeft="@dimen/space_6"-->
+        <!--android:gravity="center|left"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"/>-->
+</android.support.constraint.ConstraintLayout>
+</layout>

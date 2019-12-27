@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="personDetail"
+            type="com.nsk.app.bussiness.mine.viewmodel.PersonSettingModel"/>
+    </data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_gray"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:id="@+id/rl_avatar"
+        android:background="@color/white"
+        >
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F4F4F4"
+
+            />
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/ct_avatar"
+            android:text="@string/avatar"
+            android:textColor="@color/title_black"
+            android:textSize="18sp"
+            android:layout_marginLeft="@dimen/space_14"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_80"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:url="@{personDetail.iconUrl}"
+            android:id="@+id/circle_person"
+            android:layout_marginRight="54dp"
+            android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_14"
+            android:src="@drawable/arrow_right"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_name"
+        app:cLeftTextString="@string/user_name"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        app:cLeftTextSize="18sp"
+        app:cLeftBottomTextColor="@color/title_black"
+        app:cRightTextString="@{personDetail.userName}"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_52"/>
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_male"
+        app:cLeftTextString="@string/male"
+        app:cRightTextString="@{personDetail.gender}"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        app:cLeftTextSize="18sp"
+        app:cLeftBottomTextColor="@color/title_black"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_52"/>
+
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_location"
+        app:cLeftTextString="@string/user_location"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        app:cLeftTextSize="18sp"
+        app:cRightTextString="@{personDetail.address}"
+        app:cLeftBottomTextColor="@color/title_black"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_52"/>
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_birthday"
+        app:cLeftTextString="@string/user_brithday"
+        app:cRightTextString="@{personDetail.birthDay}"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        app:cLeftTextSize="18sp"
+        app:cLeftBottomTextColor="@color/title_black"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_52"/>
+</LinearLayout>
+</layout>

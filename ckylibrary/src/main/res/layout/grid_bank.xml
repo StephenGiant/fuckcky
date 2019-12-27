@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <GridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/white"
+        android:id="@+id/grid_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:numColumns="3"/>
+
+
+

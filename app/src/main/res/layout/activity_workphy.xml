@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<android.support.constraint.ConstraintLayout
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!-- 入职体检参团-->
+    <android.support.v4.widget.NestedScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space_40"
+        >
+    <android.support.constraint.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<ImageView
+    android:scaleType="fitXY"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/iv_workphy"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+
+    />
+    <TextView
+        android:id="@+id/tv_phydes"
+        app:layout_constraintTop_toBottomOf="@id/iv_workphy"
+        android:padding="@dimen/space_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <View
+        android:id="@+id/phy_divider"
+        app:layout_constraintTop_toBottomOf="@id/tv_phydes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_6"
+        android:background="@color/background"
+        />
+    <TextView
+        android:id="@+id/tv_title_products"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phy_divider"
+        android:text="选择体检产品"
+        android:textColor="@color/boder_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_phy"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/space_20"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_8"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_products"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <Button
+        android:id="@+id/btn_join"
+        android:background="@color/health_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="参团"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>
+
+</layout>

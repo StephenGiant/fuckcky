@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="helpModel"
+            type="com.nsk.app.bussiness.mine.viewmodel.HelpBean"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="@dimen/space_10"
+    android:paddingTop="@dimen/space_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TextView
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/tv_question"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:textColor="@color/orange_main"
+    android:text='@{@string/question + helpModel.n_qa_question}'
+    />
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/tv_answer"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/gray_999999"
+        android:text='@{@string/answer + helpModel.n_qa_answer}'
+        />
+    <View
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_answer"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</android.support.constraint.ConstraintLayout>
+</layout>

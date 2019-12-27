@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <import
+            type="android.view.View"/>
+        <variable
+            name="minemodel"
+            type="com.nsk.app.bussiness.index.viewmodel.MineFragmentViewModel"/>
+
+    </data>
+<RelativeLayout
+
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_personIcon"
+        android:layout_width="@dimen/space_68"
+        android:layout_height="@dimen/space_68"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/person_icon"
+        app:civ_border_color="#44444444"
+        app:civ_border_width="1dp"
+        url="@{minemodel.url}"
+        android:onClick="@{minemodel.toLogin}"
+    />
+    <TextView
+        android:layout_marginTop="@dimen/space_7"
+        android:visibility="@{minemodel.logined ? View.VISIBLE: View.GONE}"
+        android:id="@+id/tv_phone"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_personIcon"
+        android:layout_alignTop="@id/iv_personIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/title_text"
+        android:text="@{minemodel.phoneNO}"
+        />
+
+    <TextView
+        android:visibility="@{minemodel.logined ? View.VISIBLE: View.GONE}"
+        android:id="@+id/tv_userScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone"
+        android:layout_toRightOf="@id/iv_personIcon"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:text="@{minemodel.score}"
+        android:textColor="#858585" />
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tv_tologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_personIcon"
+        android:text="@string/login_regist"
+        android:textSize="@dimen/space_20"
+        android:textColor="@color/title_black"
+        android:onClick="@{minemodel.toLogin}"
+        android:visibility="@{minemodel.logined ? View.GONE: View.VISIBLE}"
+        />
+    <TextView
+        android:paddingLeft="@dimen/space_8"
+        android:paddingRight="@dimen/space_8"
+        android:paddingTop="@dimen/space_6"
+        android:paddingBottom="@dimen/space_6"
+        android:enabled="@{!minemodel.singned}"
+        android:visibility="@{minemodel.logined ? View.VISIBLE: View.GONE}"
+        android:layout_marginRight="@dimen/space_20"
+        android:gravity="center"
+        android:background="@drawable/attbutton_selector"
+        android:layout_width="@dimen/space_80"
+        android:layout_height="wrap_content"
+        android:text="@{!minemodel.singned? @string/signin : @string/signed}"
+        android:textColor="@color/text_enable_selector"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/small_13"
+        android:onClick="@{minemodel::signIn}"
+
+
+        />
+</RelativeLayout>
+</layout>

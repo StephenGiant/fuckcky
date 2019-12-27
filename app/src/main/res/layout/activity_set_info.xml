@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:textColorHint="@color/colorHint"
+        app:counterOverflowTextAppearance="@style/TextOverCount"
+    >
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="真实姓名"
+            android:inputType="text"
+            android:textColor="@color/main_black"
+        />
+
+    </android.support.design.widget.TextInputLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:textColorHint="@color/colorHint"
+            app:counterOverflowTextAppearance="@style/TextOverCount"
+        >
+            <EditText
+                android:id="@+id/et_auth"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:maxLength="18"
+                android:inputType="text"
+                android:hint="身份证号"
+                android:textColor="@color/main_black"
+            />
+        </android.support.design.widget.TextInputLayout>
+    </FrameLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_signin"
+        android:layout_width="@dimen/space_335"
+        android:layout_height="@dimen/space_44"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+    />
+</LinearLayout>
+</layout>

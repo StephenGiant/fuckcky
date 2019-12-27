@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/white"
+        android:background="@color/title_black"
+        android:text="完善身份信息可以获得积分哦，快来完善吧！"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_24"/>
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_change"
+        app:cLeftTextString="@string/change_pass"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        app:cLeftTextSize="18sp"
+        app:cLeftBottomTextColor="@color/title_black"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_52"/>
+    <com.nsk.cky.ckylibrary.widget.CommonTextView
+        android:id="@+id/ct_info"
+        app:cLeftTextString="@string/user_info"
+        app:cRightIconResForDrawableRight="@drawable/arrow_right"
+        app:cLeftTextSize="18sp"
+        app:cLeftBottomTextColor="@color/title_black"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_52"/>
+</LinearLayout>

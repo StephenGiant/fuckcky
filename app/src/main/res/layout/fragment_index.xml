@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/index_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <android.support.v4.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.youth.banner.Banner
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_200"/>
+    <ImageView
+        android:id="@+id/iv_notify"
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_35"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/notice_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--推荐-->
+    <android.support.v7.widget.RecyclerView
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/rv_ads"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/space_6"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/rv_ads"
+        android:id="@+id/rv_yaoqing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/space_6"
+        app:layout_constraintTop_toBottomOf="@id/rv_yaoqing"
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/rv_cards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/space_6"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/rv_cards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/space_50"
+        android:id="@+id/rv_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_recommend"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:paddingBottom="@dimen/space_10"-->
+        <!--android:paddingLeft="@dimen/space_15"-->
+        <!--android:paddingRight="@dimen/space_15"-->
+        <!--android:paddingTop="@dimen/space_10"-->
+        <!--android:scaleType="fitXY"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHeight_percent="0.14"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/banner"-->
+        <!--app:layout_constraintWidth_percent="1"-->
+    <!--/>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_card"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="97dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/ll_invite"-->
+    <!--&gt;-->
+
+
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:paddingRight="@dimen/space_14"-->
+        <!--android:paddingLeft="@dimen/space_14"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/ll_card"-->
+    <!--&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_marginBottom="@dimen/space_6"-->
+            <!--android:layout_marginTop="@dimen/space_6"-->
+            <!--android:layout_marginLeft="@dimen/space_2"-->
+            <!--android:layout_marginRight="@dimen/space_2"-->
+            <!--android:id="@+id/ll_medical"-->
+            <!--android:background="@color/banner_bg"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+            <!--<ImageView-->
+                <!--android:src="@drawable/tj_tuangou"-->
+                <!--android:layout_marginLeft="@dimen/space_8"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"/>-->
+            <!--<TextView-->
+                <!--android:text="@string/tj_tuangou"-->
+                <!--android:paddingLeft="@dimen/space_6"-->
+                <!--android:gravity="center|left"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"/>-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_marginBottom="@dimen/space_6"-->
+            <!--android:layout_marginTop="@dimen/space_6"-->
+            <!--android:layout_marginLeft="@dimen/space_2"-->
+            <!--android:layout_marginRight="@dimen/space_2"-->
+            <!--android:id="@+id/ll_need"-->
+            <!--android:background="@color/banner_bg"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+            <!--<ImageView-->
+                <!--android:src="@drawable/yl_tx"-->
+                <!--android:layout_marginLeft="@dimen/space_8"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"/>-->
+            <!--<TextView-->
+                <!--android:text="@string/yl_tx"-->
+                <!--android:paddingLeft="@dimen/space_6"-->
+                <!--android:gravity="center|left"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"/>-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_marginBottom="@dimen/space_6"-->
+            <!--android:layout_marginTop="@dimen/space_6"-->
+            <!--android:layout_marginLeft="@dimen/space_2"-->
+            <!--android:layout_marginRight="@dimen/space_2"-->
+            <!--android:background="@color/banner_bg"-->
+            <!--android:id="@+id/ll_exchange"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+            <!--<ImageView-->
+                <!--android:src="@drawable/jf_dh"-->
+                <!--android:layout_marginLeft="@dimen/space_8"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"/>-->
+            <!--<TextView-->
+                <!--android:text="@string/jf_dh"-->
+                <!--android:paddingLeft="@dimen/space_6"-->
+                <!--android:gravity="center|left"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"/>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+</android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</layout>

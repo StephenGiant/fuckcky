@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="cashmodel"
+            type="com.nsk.app.bussiness.mine.viewmodel.CashBean"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/space_20"
+    android:paddingLeft="@dimen/space_20"
+    android:paddingRight="@dimen/space_20"
+    android:paddingBottom="@dimen/space_12"
+    android:background="@color/white"
+    >
+<TextView
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="@{cashmodel.n_record_title}"
+    android:id="@+id/cash_title"
+    android:textColor="@color/title_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/cash_title"
+        app:layout_constraintStart_toStartOf="@id/cash_title"
+        android:id="@+id/tv_cashtime"
+        android:textSize="12sp"
+        android:text="@{cashmodel.n_record_createtime}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginRight="@dimen/space_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_money"
+        android:textSize="18sp"
+        android:text='@{@string/noletter + cashmodel.n_record_cash+@string/unit_yuan}'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_money"
+        app:layout_constraintEnd_toEndOf="@id/tv_money"
+        android:id="@+id/tv_status"
+        android:textSize="10sp"
+        android:textColor="@color/boder_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>
+</layout>

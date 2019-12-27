@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_center_textsize">18dp</dimen>
+    <dimen name="space_46">46dp</dimen>
+
+    <!--以下是字体大小-->
+    <dimen name="big_title">22sp</dimen>
+    <dimen name="top_title">18sp</dimen>
+    <dimen name="small_13">13sp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_27">27dp</dimen>
+    <dimen name="space_52">52dp</dimen>
+    <dimen name="space_28">28dp</dimen>
+    <dimen name="space_48">48dp</dimen>
+    <dimen name="space_86">86dp</dimen>
+    <dimen name="space_50">50dp</dimen>
+    <dimen name="space_156">156dp</dimen>
+    <dimen name="space_165">165dp</dimen>
+    <dimen name="space_18">18dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_200">200dp</dimen>
+    <dimen name="space_60">60dp</dimen>
+    <dimen name="space_23">23dp</dimen>
+    <dimen name="space_76">76dp</dimen>
+    <dimen name="space_42">42dp</dimen>
+    <dimen name="space_120">120dp</dimen>
+    <dimen name="space_100">100dp</dimen>
+    <dimen name="space_3">3dp</dimen>
+    <dimen name="space_55">55dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+</resources>

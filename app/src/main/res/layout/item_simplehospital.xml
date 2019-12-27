@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginLeft="@dimen/space_15"
+    android:text="1 华山医院"
+    android:id="@+id/tv_hospitalname"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

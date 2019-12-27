@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:paddingTop="@dimen/space_20"
+        android:layout_marginLeft="@dimen/space_20"
+        android:paddingBottom="@dimen/space_20"
+        android:id="@+id/tv_packet_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="红包奖励"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/boder_gray"
+        />
+    <TextView
+        android:paddingTop="@dimen/space_20"
+        android:layout_marginRight="@dimen/space_20"
+        android:paddingBottom="@dimen/space_20"
+        android:id="@+id/tv_seeall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看全部"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/orange_main"
+        />
+    <ImageView
+        android:layout_marginTop="@dimen/space_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/arrow_right_orange"
+        android:layout_width="@dimen/space_20"
+        android:layout_height="@dimen/space_20" />
+    <android.support.v7.widget.RecyclerView
+        android:overScrollMode="never"
+        android:id="@+id/rv_score"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_packet_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</android.support.constraint.ConstraintLayout>

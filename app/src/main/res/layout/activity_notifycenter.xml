@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="notifycentermodel"
+            type="com.nsk.app.bussiness.mine.viewmodel.NotifyCenterModel"/>
+    </data>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+<RelativeLayout
+    android:id="@+id/rl_sys"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+
+    >
+<ImageView
+    android:layout_marginLeft="@dimen/space_20"
+    android:id="@+id/iv_sys"
+    android:layout_centerVertical="true"
+    android:src="@drawable/sysnotify"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/tv_systitle"
+    android:layout_marginLeft="@dimen/space_12"
+    android:layout_toRightOf="@id/iv_sys"
+    android:layout_alignTop="@id/iv_sys"
+    android:textColor="@color/title_black"
+    android:text="系统公告"
+    android:textSize="18sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <!--@{notifycentermodel.sysNotifyTitle}-->
+    <TextView
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_below="@id/tv_systitle"
+        android:layout_toRightOf="@id/iv_sys"
+        android:text="系统升级公告"
+        android:textColor="@color/boder_gray"
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:visibility="@{notifycentermodel.showSys ? View.VISIBLE :View.GONE}"
+        android:layout_marginRight="@dimen/space_20"
+        android:gravity="center"
+        android:background="@drawable/notify_oval"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@{notifycentermodel.sysNotifyCount}"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_person"
+        app:layout_constraintTop_toBottomOf="@id/rl_sys"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/white"
+        >
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/background"
+            />
+        <ImageView
+            android:layout_marginLeft="@dimen/space_20"
+            android:id="@+id/iv_person"
+            android:layout_centerVertical="true"
+            android:src="@drawable/personnotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_persontitle"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_toRightOf="@id/iv_person"
+            android:layout_alignTop="@id/iv_person"
+            android:textColor="@color/title_black"
+            android:text="个人消息"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_below="@id/tv_persontitle"
+            android:layout_toRightOf="@id/iv_person"
+            android:text="@{notifycentermodel.personNotifyTitle}"
+            android:textColor="@color/boder_gray"
+            android:id="@+id/tv_tip_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="@{notifycentermodel.showPerson ? View.VISIBLE :View.GONE}"
+            android:layout_marginRight="@dimen/space_20"
+            android:gravity="center"
+            android:background="@drawable/notify_oval"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@{notifycentermodel.personNotifyCount}"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_activity"
+       app:layout_constraintTop_toBottomOf="@id/rl_person"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/white"
+        >
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/background"
+            />
+        <ImageView
+            android:layout_marginLeft="@dimen/space_20"
+            android:id="@+id/iv_activity"
+            android:layout_centerVertical="true"
+            android:src="@drawable/activitynotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_acttitle"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_toRightOf="@id/iv_activity"
+            android:layout_alignTop="@id/iv_activity"
+            android:textColor="@color/title_black"
+            android:text="活动通知"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_below="@id/tv_acttitle"
+            android:layout_toRightOf="@id/iv_activity"
+            android:text="@{notifycentermodel.actNotifyTitle}"
+
+            android:textColor="@color/boder_gray"
+            android:id="@+id/tv_tip_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="@{notifycentermodel.showAct? View.VISIBLE :View.GONE}"
+            android:layout_marginRight="@dimen/space_20"
+            android:id="@+id/tv_count_act"
+            android:gravity="center"
+            android:background="@drawable/notify_oval"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@{notifycentermodel.actNotifyCount}"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+</layout>

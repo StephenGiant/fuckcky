@@ -1,0 +1,55 @@
+package com.nsk.app.config
+
+object Routers {
+    const val activity = "/cky/activity/"
+    const val fragment = "/fragment/"//使用fragment路由 必须拼接activity路由,这样看的比较清晰
+    const val index_act = activity + "index"
+    const val index_fragment = index_act + fragment + "index"//indexactivity的首页
+    const val health_fragment = index_act + fragment + "wealth_gray"//首页的健康页
+    const val mine_fragment = index_act + fragment +"mine"
+    const val mine_activity = activity+"mine"
+    const val settings_activity = activity+"settings"
+    const val login = activity +"login"//登录
+    const val signUp = activity +"signUp"//注册
+    const val help = activity +"help"//帮助
+    const val reSet = activity +"reSet"//重置密码
+    const val perInfo = activity +"setInfo"//设置个人信息
+    const val user_name = activity +"userName"//用户名
+    const val loan_index = activity+"loanindex"
+    const val my_loan = activity +"myLoan"//我的贷款
+    const val my_heal = activity +"myHealth"//我的贷款
+    const val safe_set = activity +"safe_set"//安全设置
+    const val fzsm = activity +"fzsm"//负责声明
+    const val xieyi = activity+"xieyi" //用户协议
+    const val about = activity +"about"//关于我们
+    const val user_info = activity +"user_info"//完善用户信息
+    const val cards = activity +"cards"//办卡
+    const val supermark_card = activity +"supermark_cards"//信用卡超市
+    const val one_key_cards = activity +"oneKeyCards"//一键办卡
+    const val cred_cards = activity +"cred_cards"//信用卡详情
+    const val myscore = activity+"user_score"//用户积分界面
+    const val health_index = activity+"health"
+    const val add_cred_card = activity+"添加信用卡"//添加信用卡
+    const val select_bank = activity+"select_bank"//搜索银行
+    const val loanDetail = activity+"loandetail" //借款详情
+    const val workphy = activity+"workphy"    //团购入职体检
+    const val prophy = activity+"prophy"      //高端定制体检
+    const val recommendCard = activity+"recommend" //推荐办卡
+    const val mycards = activity+"mycards"     //我的卡片
+    const val mynotice = activity+"mynotice"   //消息页
+    const val addcards = activity+"addcards"     // 添加信用卡
+    const val payphy = activity+"payphy"      //体检付费
+    const val notice_detail = activity+"notice_detail"      //通知详情
+    const val allmyscore = activity+"allmyscore"      //全部积分
+    const val allCash = activity+"allCash"      //全部现金
+    const val healthy_special = activity+"healthyspecial"   //特需申请
+    const val invite_activity = activity+"invite"   //我的邀请
+    const val special_success = activity +"specialsuccess"  //特需申请成功
+    const val mypacket = activity+"mypacket"
+    const val packetdetail = activity+"packetdetail"
+    const val orderDetail = activity+"orderDetail"//订单详情
+    const val allpackets = activity+"allpackets"
+    const val repay = activity+"repay"
+    const val topexamsuccess = activity+ "topexamsuccess"
+    const val webview = activity+"webview"
+}
